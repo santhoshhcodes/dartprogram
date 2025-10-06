@@ -1,0 +1,63 @@
+void main() {
+  int a = 60;
+  int b = 80;
+  int c = 50;
+  if (a > b && a > c) {
+    print("a is greater than b&c,a = $a");
+  } else if (b > a && b > c) {
+    print("b is greater than a&c,b = $b");
+  } else {
+    print("c is greater than a&b,c = $c");
+  }
+  //Vowel or Constant
+  String myName = "anthosh";
+  if (myName.startsWith(RegExp(r'^[AEIOUaeiou]'))) {
+    print("$myName starts with a Vowel");
+  } else {
+    print("$myName starts with a Consnant");
+  }
+  //Leap Year
+  var year = 2000;
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    print("$year is a leap year.");
+  } else {
+    print("$year is not a leap year.");
+  }
+  //Odd or Even
+  int Num = 11;
+  if (Num % 2 == 0) {
+    print("$Num is a Even Number");
+  } else {
+    print("$Num is an Odd Number");
+  }
+  //counting upppercase,lowercase,numberand special char
+  String input = "Sandy@2K4";
+
+  //check the perfect square or Not
+  int root = 49;
+  bool isSquare = false;
+  for (int i = 1; i <= root; i++) {
+    if (i * i == root) {
+      isSquare = true;
+      break;
+    }
+  }
+  if (isSquare) {
+    print("$root is Perfect Square");
+  } else {
+    print("$root is Notperfect Square");
+  }
+
+  //check the voter or not
+  var voter = 17;
+  if (voter >= 18) {
+    print("you age is ${voter} so you are eligible to vote");
+  } else {
+    print("you age is ${voter} so you are not eligible to vote");
+  }
+  //chck the number positive,negative or zero
+  var check = 10;
+  if(check.isNegative){
+    print("number is negative");
+  }
+}

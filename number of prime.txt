@@ -1,0 +1,20 @@
+void main() {
+  List<int> primes = [];
+  int num = 2;
+
+  while (primes.length < 20) {
+    bool isPrime = true;
+    for (int i = 2; i * i <= num; i++) {
+      if (num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      primes.add(num);
+    }
+    num++;
+  }
+
+  print(primes);
+}

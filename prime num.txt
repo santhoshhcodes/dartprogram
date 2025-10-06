@@ -1,0 +1,46 @@
+void main() {
+  int num = 80;
+  bool isPrime = true;
+  for (int i = 2; i <= num / 2; i++) {
+    if (num % i == 0) {
+      isPrime = false;
+    }
+  }
+  if (isPrime) {
+    print("$num is a Prime Number");
+  } else {
+    print("$num is Not a Prime Number");
+  }
+  List<int> factor = [];
+  List<int> Prime = [];
+  for (int i = 2; i <= num ~/ 2; i++) {
+    if (num % i == 0) {
+      factor.add(i);
+      bool isPrimeFactor = true;
+      for (int j = 2; j <= i ~/ 2; j++) {
+        if (i % j == 0) {
+          isPrimeFactor = false;
+          break;
+        }
+      }
+      if (isPrimeFactor) {
+        Prime.add(i);
+      }
+    }
+  }
+  print("factor of $num :$factor");
+  print("Prime in the factor of $num : $Prime");
+  if (Prime.isNotEmpty) {
+  int largest = 0;
+  for (int i = 0; i < Prime.length; i++) {
+    if (Prime[i] > largest) {
+      largest = Prime[i];
+    }
+  }
+  print("Largest Prime in the factors of $num: $largest");
+} else {
+  print("No Prime factors found.");
+}
+
+
+}

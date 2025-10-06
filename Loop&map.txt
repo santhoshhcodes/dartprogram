@@ -1,0 +1,77 @@
+ void main(){
+   //fixed length list
+   List<int> x=List.filled(6,0);
+   x[0]=10;
+   x[1]=2;
+//    x[2]=5;
+//    x[3]=25;
+   x[4]=30;
+   x[5]=100;
+   print(x);
+   
+   
+   //growable list
+   List<int> a=[1,2,3,4,5,6];
+   List<dynamic> b=["apple","banana","cherry",12];
+   List<Map<String,dynamic>> c=[];
+   
+   print(a);
+   print(a.length);
+   print(a.isEmpty);
+   print(a.isNotEmpty);
+   print(a.first);
+   print(a[0]);
+   print(a.last);
+   print(a[b.length-1]);
+   print(a.reversed.toList());
+   
+   // list methods
+   a.add(10);
+   print(a);
+   a.addAll([20,30]);
+   print(a);
+   a.insert(1,5);
+   print(a);
+   a.insertAll(3,[50,60,70]);
+   print(a);
+   a[0]=250;
+   print(a);
+   a.replaceRange(2,8,[11,22,33,44]);
+   print(a);
+   a.remove(250);
+   print(a);
+   a.removeAt(0);
+   print(a);
+   a.removeLast();
+   print(a);
+ a.removeRange(1,5);
+   print(a);
+   
+   //for in
+   print("---for in---------");
+   for(var x in a){
+     if(x%2==1){
+       
+       print(x+10);
+     }
+     //print(x);
+   }
+   print("------for each---------");
+   a.forEach((x)=>print(x));
+   print("----------for loop-------------");
+   for(int i=0;i<a.length;i++){
+     print(a[i]);
+   }
+   
+   print("-----map function---");
+   var m1=a.map((x)=>x*2);
+   print(m1.toList());
+   
+   
+   
+   
+   
+   
+   
+   
+ }

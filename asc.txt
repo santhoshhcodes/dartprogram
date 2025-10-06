@@ -1,0 +1,13 @@
+void main() {
+  List<int> first = [1, 2, 8, 5];
+  List<int> second = [3, 4, 9];
+  List<int> ascending = [];
+  for (int value in first) {
+      ascending.add(value);
+  }
+  for (int value in second) {
+      ascending.add(value);
+  }
+  ascending.sort();
+  print('Combined and sorted list in ascending order: $ascending');
+}

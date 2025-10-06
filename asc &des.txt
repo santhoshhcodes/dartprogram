@@ -1,0 +1,27 @@
+void main(){
+  List<int> Number = [5,8,2,1,9,7,33];
+  List<int> ascending = List.from(Number);
+  List<int> descending = List.from(Number);
+  
+  for(int i = 0; i < ascending.length-1 ; i++){
+    for(int j = i +1 ; j< ascending.length ; j++){
+      if(ascending[i]< ascending[j]){
+        int temp = ascending[i];
+        ascending[i]= ascending[j];
+        ascending[j]= temp;
+      }
+    }
+  }
+  for(int i =0; i< descending.length-1 ;i++){
+    for(int j = i+1; j < descending.length ; j++){
+      if(descending[i]> descending[j]){
+        int temp = descending[i];
+        descending[j] = descending[i];
+        descending[i] = temp;
+      }
+    }
+  }
+  print("Ascending order of $Number is $ascending");
+  print("Descending order of $Number is $descending");
+  
+}

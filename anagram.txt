@@ -1,0 +1,18 @@
+void main() {
+  String Word1 = "eat";
+  String Word2 = "ate";
+
+  bool isAnagram(String a, String b) {
+   
+    String sortA = (a.replaceAll(' ', '').toLowerCase().split('')..sort()).join();
+    String sortB = (b.replaceAll(' ', '').toLowerCase().split('')..sort()).join();
+
+    return sortA == sortB;
+  }
+
+  if (isAnagram(Word1, Word2)) {
+    print("$Word1 and $Word2 is Anagram");
+  } else {
+    print("$Word1 and $Word2 is not Anagram");
+  }
+}

@@ -1,0 +1,121 @@
+void main(){
+   Map<String,dynamic> person={"name":"Dhanush",
+                               "place":"cbe","age":20};
+   print(person);
+   print(person["name"]);
+   List<Map<String,dynamic>> a=[{"name":"Dhanush",
+                               "place":"cbe","age":20},
+                                {"name":"Santhosh",
+                               "place":"Ooty","age":25,"Mobile":7845120369},
+                                {"name":"Ashwini",
+                               "place":"chennai","age":19}];
+   print(a);
+   print(a[0]);
+   print(a[1]["name"]);
+  print(a.length);
+   print(a[1].length);
+   print(person.isEmpty);
+   print(person.isNotEmpty);
+   print(person.keys);
+   print(person.values);
+   print(person.entries.toList());
+   
+//    //methods
+   person.addAll({"Mobile":7410258963,"Qualification":"M.Com"});
+   print(person);
+   print(person.containsKey("mobile"));
+//   // var myInput=" Dhanush".trim();
+   print(person.containsValue("  Dhanush".trim()));
+    person.remove("Qualification");
+   print(person);
+  //person.clear();
+   print(person);
+//    print(person.toString().runtimeType);
+
+   List x=[1,2,3,4];
+   x.forEach((element)=>print(element));
+   var y=x.map((elt)=>elt);
+   print(y.toList());
+   
+   person.forEach((a,b)=>{
+     if(person["name"]=="Dhanush"){
+       person["name"]="Dhanush S",
+         print(person)
+     },
+      });
+   
+   person["Mobile"]=9988774455;
+   print(person);
+   person["Role"]="Admin";
+   print(person);
+   
+person.forEach((a,b)=>{
+  print("$a:$b")
+});
+   
+   
+   
+
+}
+
+ void main(){
+   Set a=new Set();
+   Set b={};
+   Set c={1,2,3,4,5,6};
+   print(c);
+   b.addAll({1,2});
+   print(b);
+   a.add(5);
+   print(a);
+   a.addAll({10,15,20,10});
+   print(a);
+   print(a.first);
+   print(a.iterator);
+   print(a.length);
+   print(a.indexed);
+   
+ }
+
+//functions
+ void main(){
+   print("Built in function");
+   f1();    //function calling
+   print("----------------------");
+   print(add(20,30));
+   print(add(50,50));
+   var q=add(100,100);
+   print(q);
+   print("----------------------");
+   optional_positional(1,"Dhanush",25);  optional_positional(2,"Santhosh");
+     optional_positional(3,"AShwini",22);  
+   optional_named(age:25,name:"Manusho");
+   optional_default("Ashwini");
+     optional_default("Manusho");
+   lamda();
+ }
+f1(){     //function declaration
+  print("User defined function");   //function definition
+}
+  add(int x,int y){
+ 
+  int z=x+y;
+  print(z);
+  return z;
+ 
+}
+optional_positional([int? id,String? name,int? age]){
+  print(id);
+  print(name);
+  print(age);
+}
+optional_named({int? id,String? name,int? age}){
+  print(id);
+  print(name);
+  print(age);
+}
+optional_default(String name, {String course="flutter"}){
+    print("$name is doing $course");
+ 
+}
+lamda()=>
+  print("lamda function");

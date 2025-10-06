@@ -1,0 +1,14 @@
+void main(){
+  List<int> num = [1,2,3,4,56,4,58,87];
+  List<int> even = [];
+  List<int> odd = [];
+  for(int i = 0 ; i < num.length ; i++){
+    if( num[i] %2 == 0){
+      even.add(num[i]);
+    }else{
+      odd.add(num[i]);
+    }
+  }
+  print("$num number of  even ${even.length}");
+   print("$num number of  odd ${odd.length}");
+}
